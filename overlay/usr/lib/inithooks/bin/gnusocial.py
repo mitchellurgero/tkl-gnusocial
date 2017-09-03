@@ -47,7 +47,6 @@ def main():
             email = val
         elif opt == '--domain':
             domain = val
-
     if not password:
         d = Dialog('TurnKey Linux - First boot configuration')
         password = d.get_password(

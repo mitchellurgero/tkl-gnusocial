@@ -4,4 +4,7 @@
 php5-curl
 php5-gd
 php5-intl
-
+ufw
+fail2ban
+git
+rabbitmq-server

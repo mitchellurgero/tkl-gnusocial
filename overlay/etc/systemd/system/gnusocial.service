@@ -1,0 +1,16 @@
+[Unit]
+Description=GNUSocial queue Daemons
+Wants=mysql.service rabbitmq-server.service
+After=network.target mysql.service rabbitmq-server.service
+
+[Service]
+User=www-data
+Group=www-data
+Type=forking
+ExecStart=/var/www/gnusocial/scripts/startdaemons.sh
+ExecStop=/var/www/gnusocial/scripts/stopdaemons.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

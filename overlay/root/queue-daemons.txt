@@ -1,0 +1,13 @@
+To add queue daemons to GNU Social add the following to /var/www/gnusocial/config.php:
+
+$config['queue']['daemon'] = true;
+$config['queue']['enabled'] = true;
+$config['queue']['subsystem'] = 'stomp'; //if this was 'db' then you need to change it.
+$config['queue']['stomp_server'] = 'tcp://127.0.0.1:61613';
+$config['queue']['stomp_username'] = 'guest';
+$config['queue']['stomp_password'] = 'guest';
+$config['queue']['control_channel'] = 'gs-control';
+$config['queue']['queue_basename'] = 'gs-queue';
+$config['queue']['stomp_persistent'] = true;
+$config['queue']['stomp_transactions'] = true;
+$config['queue']['stomp_acks'] = true;

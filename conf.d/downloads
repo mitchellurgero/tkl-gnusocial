@@ -2,3 +2,4 @@
 
 [ "$FAB_HTTP_PROXY" ] && PROXY="--proxy $FAB_HTTP_PROXY"
 curl -L -f $PROXY https://git.gnu.io/gnu/gnu-social/repository/archive.tar.gz -o /usr/local/src/gnusocial.tar.gz
+#curl --insecure -L -f $PROXY https://git.gnu.io/h2p/Qvitter/repository/master/archive.zip -o /usr/local/src/qvitter.zip
