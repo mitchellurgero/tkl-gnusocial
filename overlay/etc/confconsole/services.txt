@@ -1,9 +1,11 @@
 GS Appliance custom built by:
-( MileGo @ niu.moe )
+Mitchell Urgero 
 
 GNUSocial:  https://$ipaddr
 Web shell:  https://$ipaddr:12320
             (Blocked by default)
 Webmin:     https://$ipaddr:12321
+            (Blocked by default)
+Adminer:    https://$ipaddr:12322
             (Blocked by default)
 SSH/SFTP:   $ipaddr:22
