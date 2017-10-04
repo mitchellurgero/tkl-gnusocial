@@ -120,6 +120,8 @@ ufw disable && ufw --force enable
 
 ### rabbitmq-server configuration-ish stuff.
 rabbitmq-plugins enable rabbitmq_stomp
+rabbitmqctl set_user_tags guest administrator
+rabbitmqctl set_permissions -p / guest ".*" ".*" ".*"
 #systemctl restart rabbitmq-server
 
 ### Fix Stomp libs:
