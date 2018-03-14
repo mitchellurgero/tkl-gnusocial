@@ -13,6 +13,8 @@ and on top of that:
 - GNU social configurations:
    
    - Installed from upstream source code to /var/www/gnusocial
+   - GNUSocial username to login: `administrator`
+   - GNUSocial password to login: `turnkey`
 
 - SSL support out of the box.
 - `Adminer`_ administration frontend for MySQL (listening on port
