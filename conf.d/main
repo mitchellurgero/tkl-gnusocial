@@ -40,10 +40,12 @@ URL="http://127.0.0.1/install.php"
 EMAIL=$(echo $ADMIN_MAIL | sed s/@/%40/)
 
 curl --data "sitename=GNU+social&ssl=always&host=localhost&dbtype=mysql&database=$DB_NAME&dbusername=$DB_USER&dbpassword=$DB_PASS&admin_nickname=$ADMIN_USER&admin_password=$ADMIN_PASS&admin_password2=$ADMIN_PASS&admin_email=$EMAIL&admin_updates=false&site_profile=public&submit=Submit&fancy-enable=enable" $URL
+
 ### QVITTER  & 2FA INSTALL ###
 git clone https://git.gnu.io/h2p/Qvitter $WEBROOT/plugins/Qvitter 
 git clone https://github.com/mitchellurgero/TwoFactorAuth $WEBROOT/plugins/TwoFactorAuth
 git clone https://gitgud.io/panjoozek413/qvitterplus $WEBROOT/plugins/QvitterPlus
+
 ### Work around for an error in original setup ###
 sed -i '/127.0.0.1/d' $WEBROOT/config.php
 
@@ -118,11 +120,8 @@ ufw allow 80
 replace "IPV6=yes" "IPV6=no" -- /etc/default/ufw
 ufw disable && ufw --force enable
 
-### rabbitmq-server configuration-ish stuff.
-rabbitmq-plugins enable rabbitmq_stomp
-rabbitmqctl set_user_tags guest administrator
-rabbitmqctl set_permissions -p / guest ".*" ".*" ".*"
-#systemctl restart rabbitmq-server
+### Restart ActiveMQ I guess.
+systemctl restart activemq.service
 
 ### Fix Stomp libs:
 

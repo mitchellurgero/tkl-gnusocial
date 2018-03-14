@@ -7,4 +7,4 @@ php5-intl
 ufw
 fail2ban
 git
-rabbitmq-server
+activemq
