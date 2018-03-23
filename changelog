@@ -1,3 +1,12 @@
+turnkey-gnusocial-14.2 (2) murgero; urgency=low
+
+  * Security updates.
+  
+  * Apache's activemq installed for speed in post federation
+  
+  * Note: Please refer to turnkey-core's changelog for changes common to all
+    appliances. Here we only describe changes specific to this appliance.
+
 turnkey-gnusocial-14.2 (1) turnkey; urgency=low
 
   * Installed security updates.
